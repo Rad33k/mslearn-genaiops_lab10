@@ -20,9 +20,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
       - name: Show variable
         run: |
-          echo "First 10 characters: ${{secrets.AZURE_CLIENT_ID}:0:10}"
+          echo "First 10 characters: ${${secrets.AZURE_CLIENT_ID}:0:10}"
       
       - name: Set up Python
         uses: actions/setup-python@v5
